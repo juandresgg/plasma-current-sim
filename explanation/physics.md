@@ -129,7 +129,7 @@ Now we would be in a position to calculate the current density that arises due t
 
 $$
 \begin{align*}
-    \vec{ J } _{ B }_{ p }  &= \dfrac{ \vec{ B }_{ p }  \times \vec{ \nabla } p }{ B_{ p } ^{ 2 }  } 
+    \vec{ J } _{ B }  &= \dfrac{ \vec{ B }_{ p }  \times \vec{ \nabla } p }{ B_{ p } ^{ 2 }  } 
 \end{align*}
 $$
 
