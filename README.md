@@ -54,7 +54,8 @@ Once with the current profile the solenoid induced into the plasma, the bootstra
 ## Results
 
 ### Current density in plasma cross section
-![Video of current density in plasma cross section, as time advances](attachments/gif.mp4) 
+
+https://github.com/user-attachments/assets/6a2c705e-f5d2-413c-a9b9-e654b00708c4
 
 ### Induced and bootstrap current
 ![Induced current through time, along with the bootstrap current](attachments/b-curr-vs-cs.png) 
