@@ -11,18 +11,18 @@ The physics that are simulated in the code are explained, as well as the thought
 ## Table of Contents:
 
 1. [Physical Explanation](explanation/physics.md):  
-    1.1 [Overview](explanation/physics.md##overview)  
-    1.2 [Central Solenoid Induction](explanation/physics.md##central-solenoid-induction)  
-        1.2.1 [Central Solenoid Magnetic Field](explanation/physics.md###cs-magnetic-field)  
-        1.2.2 [Field Flux](explanation/physics.md###field-flux)  
-        1.2.3 [Induced Electromotive Force](explanation/physics.md###induced-emf)  
-        1.2.4 [Plasma Resistivity](explanation/physics.md###plasma-resistivity)  
-        1.2.5 [Induced Current](explanation/physics.md###induced-current)  
-    1.3 [Bootstrap Current](explanation/physics.md##bootstrap-current)  
-        1.3.1 [Particle Density and its Gradient](explanation/physics.md###particle-density-and-gradient)  
-        1.3.2 [Poloidal Magnetic Field](explanation/physics.md###poloidal-magnetic-field)  
-        1.3.3 [Plasma Current Density](explanation/physics.md###current-density)  
-        1.3.4 [Total Plasma Current](explanation/physics.md###total-plasma-current)  
+    1.1 [Overview](explanation/physics.md#overview)  
+    1.2 [Central Solenoid Induction](explanation/physics.md#central-solenoid-induction)  
+        1.2.1 [Central Solenoid Magnetic Field](explanation/physics.md#cs-magnetic-field)  
+        1.2.2 [Field Flux](explanation/physics.md#field-flux)  
+        1.2.3 [Induced Electromotive Force](explanation/physics.md#induced-emf)  
+        1.2.4 [Plasma Resistivity](explanation/physics.md#plasma-resistivity)  
+        1.2.5 [Induced Current](explanation/physics.md#induced-current)  
+    1.3 [Bootstrap Current](explanation/physics.md#bootstrap-current)  
+        1.3.1 [Particle Density and its Gradient](explanation/physics.md#particle-density-and-gradient)  
+        1.3.2 [Poloidal Magnetic Field](explanation/physics.md#poloidal-magnetic-field)  
+        1.3.3 [Plasma Current Density](explanation/physics.md#current-density)  
+        1.3.4 [Total Plasma Current](explanation/physics.md#total-plasma-current)  
 
 2. [Central Solenoid Current Induction](explanation/central-solenoid.md):  
     2.1 [Current Profile](explanation/central-solenoid.md##current-profile)  
