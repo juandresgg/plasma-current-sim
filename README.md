@@ -10,42 +10,55 @@ The physics that are simulated in the code are explained, as well as the thought
 
 ## Table of Contents:
 
-1. [Physical Explanation](explanation/physics.md):  
-    1.1 [Overview](explanation/physics.md#overview)  
-    1.2 [Central Solenoid Induction](explanation/physics.md#central-solenoid-induction)  
-        1.2.1 [Central Solenoid Magnetic Field](explanation/physics.md#cs-magnetic-field)  
-        1.2.2 [Field Flux](explanation/physics.md#field-flux)  
-        1.2.3 [Induced Electromotive Force](explanation/physics.md#induced-emf)  
-        1.2.4 [Plasma Resistivity](explanation/physics.md#plasma-resistivity)  
-        1.2.5 [Induced Current](explanation/physics.md#induced-current)  
-    1.3 [Bootstrap Current](explanation/physics.md#bootstrap-current)  
-        1.3.1 [Particle Density and its Gradient](explanation/physics.md#particle-density-and-gradient)  
-        1.3.2 [Poloidal Magnetic Field](explanation/physics.md#poloidal-magnetic-field)  
-        1.3.3 [Plasma Current Density](explanation/physics.md#current-density)  
-        1.3.4 [Total Plasma Current](explanation/physics.md#total-plasma-current)  
+- 1 [Physical Explanation](explanation/physics.md):  
+    - 1.1 [Overview](explanation/physics.md#overview)  
+    - 1.2 [Central Solenoid Induction](explanation/physics.md#central-solenoid-induction)  
+        - 1.2.1 [Central Solenoid Magnetic Field](explanation/physics.md#cs-magnetic-field)  
+        - 1.2.2 [Field Flux](explanation/physics.md#field-flux)  
+        - 1.2.3 [Induced Electromotive Force](explanation/physics.md#induced-emf)  
+        - 1.2.4 [Plasma Resistivity](explanation/physics.md#plasma-resistivity)  
+        - 1.2.5 [Induced Current](explanation/physics.md#induced-current)  
+    - 1.3 [Bootstrap Current](explanation/physics.md#bootstrap-current)  
+        - 1.3.1 [Particle Density and its Gradient](explanation/physics.md#particle-density-and-gradient)  
+        - 1.3.2 [Poloidal Magnetic Field](explanation/physics.md#poloidal-magnetic-field)  
+        - 1.3.3 [Plasma Current Density](explanation/physics.md#current-density)  
+        - 1.3.4 [Total Plasma Current](explanation/physics.md#total-plasma-current)  
 
-2. [Central Solenoid Current Induction](explanation/central-solenoid.md):  
-    2.1 [Current Profile](explanation/central-solenoid.md#current-profile)  
-    2.2 [Magnetic Field](explanation/central-solenoid.md#magnetic-field)  
-        2.2.1 [Definition of Central Solenoid](explanation/central-solenoid.md#cs-definition)  
-        2.2.2 [Biot-Savart Law](explanation/central-solenoid.md#biot-savart-law)  
-    2.3 [Induced EMF](explanation/central-solenoid.md#induced-emf)  
-        2.3.1 [Magnetic Field Flux](explanation/central-solenoid.md#field-flux)  
-        2.3.2 [Faraday's Law](explanation/central-solenoid.md#faraday's-law)  
-    2.4 [Induced Current](explanation/central-solenoid.md#induced-current)  
-        2.4.1 [Current Density](explanation/central-solenoid.md#current-density)  
-        2.4.2 [Plasma Resistance](explanation/central-solenoid.md#plasma-resistance)  
-        2.4.3 [Induced Plasma Current](explanation/central-solenoid.md#cs-induced-plasma-current)  
+- 2 [Central Solenoid Current Induction](explanation/central-solenoid.md):  
+    - 2.1 [Current Profile](explanation/central-solenoid.md#current-profile)  
+    - 2.2 [Magnetic Field](explanation/central-solenoid.md#magnetic-field)  
+        - 2.2.1 [Definition of Central Solenoid](explanation/central-solenoid.md#cs-definition)  
+        - 2.2.2 [Biot-Savart Law](explanation/central-solenoid.md#biot-savart-law)  
+    - 2.3 [Induced EMF](explanation/central-solenoid.md#induced-emf)  
+        - 2.3.1 [Magnetic Field Flux](explanation/central-solenoid.md#field-flux)  
+        - 2.3.2 [Faraday's Law](explanation/central-solenoid.md#faraday's-law)  
+    - 2.4 [Induced Current](explanation/central-solenoid.md#induced-current)  
+        - 2.4.1 [Current Density](explanation/central-solenoid.md#current-density)  
+        - 2.4.2 [Plasma Resistance](explanation/central-solenoid.md#plasma-resistance)  
+        - 2.4.3 [Induced Plasma Current](explanation/central-solenoid.md#cs-induced-plasma-current)  
 
-3. [Bootstrap Current](explanation/boot.md):  
-    3.1 [Initialization of Space](explanation/boot.md#space-initialization)  
-    3.2 [Calculation of Bootstrap Current](explanation/boot.md#bootstrap-current-calculation)  
-        3.2.1 [Particle Density Gradient](explanation/boot.md#particle-density-gradient)  
-        3.2.2 [Pressure Gradient](explanation/boot.md#pressure-gradient)  
-        3.2.3 [Current Density](explanation/boot.md#current-density)  
-        3.2.4 [Poloidal Magnetic Field](explanation/boot.md#poloidal-magnetic-field)  
-        3.2.5 [Enclosed Current](explanation/boot.md#enclosed-current)  
-        3.2.6 [Bootstrap Current Density](explanation/boot.md#bootstrap-current-density)  
+- 3 [Bootstrap Current](explanation/boot.md):  
+    - 3.1 [Initialization of Space](explanation/boot.md#space-initialization)  
+    - 3.2 [Calculation of Bootstrap Current](explanation/boot.md#bootstrap-current-calculation)  
+        - 3.2.1 [Particle Density Gradient](explanation/boot.md#particle-density-gradient)  
+        - 3.2.2 [Pressure Gradient](explanation/boot.md#pressure-gradient)  
+        - 3.2.3 [Current Density](explanation/boot.md#current-density)  
+        - 3.2.4 [Poloidal Magnetic Field](explanation/boot.md#poloidal-magnetic-field)  
+        - 3.2.5 [Enclosed Current](explanation/boot.md#enclosed-current)  
+        - 3.2.6 [Bootstrap Current Density](explanation/boot.md#bootstrap-current-density)  
+
+- 4 [Results](explanation/results.md):  
+    - 4.1 ![Current Density Distribution](explanation/results.md#current-density-distribution)  
+    - 4.2 [Total Plasma Current](explanation/results.md#total-plasma-current)  
+    - 4.3 [Plasma Bootstrap Current](explanation/results.md#plasma-bootstrap-current)  
+    - 4.4 [Plasma Bootstrap Current](explanation/results.md#plasma-bootstrap-current)  
+        - 4.4.1 [Fraction of Total Current](explanation/results.md#fraction-of-total-current)  
+        - 4.4.2 [Decrease in Bootstrap Current](explanation/results.md#decrease-of-bootstrap-current)  
+    - 4.5 [Limitations and Possible Improvements](explanation/results.md#limitations-and-possible-improvements)  
+        - 4.5.1 [Physical inaccuracies](explanation/results.md#physical-inaccuracies)  
+        - 4.5.2 [Physical inaccuracies](explanation/results.md#plasma-simplifications)  
+        - 4.5.3 [Code Shortcomings](explanation/results.md#code-shortcomings)  
+
 
 ## Summary
 The simulation first creates a current profile for the central solenoid, and then it calculates the magnetic field it would produce. Next, the flux this field creates through a plasma is calculated, as well as its change through time. With this, we find the EMF that is induced into the plasma, and the corresponding current.  
