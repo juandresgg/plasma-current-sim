@@ -73,7 +73,7 @@ $$
 And ${ \text{d} \hat{ A }  }$ is again a unitary area vector.  
 ${ a_{ p }  }$ and ${ b_{ p }  }$ would be the axes of a smaller ellipse (the amperian loop than encloses the current density), inside of the ellipse that defines the plasma boundary. These axes would have the same ratio between them as the plasma boundary ones.  
 ![Diagram of ellipses](../attachments/eli_path.png)  
-The quantities ${ \pi \sqrt{ a_{ p } ^{ 2 } + b_{ p } ^{ 2 }  }  }$ and ${ \pi a_{ b } b_{ p }  }$ would then be the perimeter and area of that inner ellipse.  
+The quantity ${ \pi a_{ b } b_{ p }  }$ would then be the area of that inner ellipse, and we would use ${ 2 \pi \sqrt{ ( a_{ p } ^{ 2 } + b_{ p } ^{ 2 } ) / 2 }  }$ as its perimeter.  
 For a point ${ \left( x_{ p } , y_{ p }  \right)  }$ inside of the plasma, these parameters would be found like:
 
 $$
