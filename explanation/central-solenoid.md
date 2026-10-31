@@ -13,6 +13,7 @@ Before creating our profile, we first need to define the parameters that will de
 For the current, we will have a value ${ I_{ \text{max}  }  }$, which will be the maximum current value that will flow through the central solenoid. For the profile we are aiming to construct, the current will start at ${ I_{ \text{max}  }  }$, and it will end at ${ - I_{ \text{max}  }  }$ (this means we will also be skipping the premagnetization phase, which takes the CS current from 0 to ${ I_{ \text{max}  }  }$).  
 
 With this, we can now start creating the CS current profile. For the ramp-up phase, we want to describe the current with a function that will allow the induced current to increase with time. The easiest way in which we can do this is with a quadratic function. Then, we can write the ramp-up current profile ${ I_{ r }  }$ as:  
+
 $$
 \begin{align*}
     I_{ r } ( t ) &= - k_{ r } \left( t \right) ^{ 2 } + b_{ r } \\
@@ -20,9 +21,11 @@ $$
     \dfrac{ d I_{ r }  }{ d t } &= - 2 k_{ r } t
 \end{align*}
 $$
+
 The minus sign is added so that the induced current (which is proportional to minus the derivative of the CS current) can increase with time.  
 
 For the flat-top phase, we want a function that will keep the induced current at a constant value. The most simple function we can use is a linear function, so we can write the flat-top profile ${ I_{ t }  }$ as:  
+
 $$
 \begin{align*}
     I_{ t } ( t ) &= -k_{ t } t + b_{ t } \\
@@ -30,9 +33,11 @@ $$
     \dfrac{ d I_{ t }  }{ d t } &= -k_{ t } 
 \end{align*}
 $$
+
 Now, we need to find values for the constants of each function. We can do this by using boundary and continuity conditions. The boundary conditions will ensure the profile starts and ends in our desired values of current, and the continuity conditions will ensure there are no jumps in either the current carried by the CS, or in the current induced into the plasma.  
 
 Starting by the boundary conditions, if we want the profile to start with a current ${ I_{ \text{max}  }  }$, and end with a current ${ -I_{ \text{max}  }  }$, the conditions will read:  
+
 $$
 \begin{align*}
     I_{ r } ( 0 ) &=  b_{ r } \\
@@ -42,8 +47,10 @@ $$
     &= -I_{ \text{max}  }
 \end{align*}
 $$
+
 From which we can immediately find that ${ b_{ r } = I_{ \text{max}  }  }$.  
 For the continuity conditions, we want the profile, as well as its derivative, to be continuous at ${ t = r_{ t } t }$. This will give us:  
+
 $$
 \begin{align*}
     I_{ r } \left( r_{ t } t_{ f }  \right) &= I_{ t } \left( r_{ t } t_{ f }  \right) \\
@@ -55,6 +62,7 @@ $$
 $$
 
 Then, from these conditions we can gather 3 equations, which we can use to find the values of the 3 remaining unknowns ${ k_{ r }  }$, ${ k_{ t }  }$ and ${ b_{ t }  }$. Using whatever method we prefer to solve this system, we may eventually find the values:  
+
 $$
 \begin{align*}
     k_{ r } &= -I_{ \text{max}  } \dfrac{ 2 }{ r_{ t } t_{ f } ^{ 2 } \left( r_{ t } - 2 \right)  } \\
@@ -64,6 +72,7 @@ $$
     b_{ t } &= -I_{ \text{max}  } \dfrac{ r_{ t } + 2 }{ r_{ t } - 2 } 
 \end{align*}
 $$
+
 Which are all function of the parameters we set at the beginning.  
 
 One of the ways in which we can implement this to create a current profile is through a function. If we define the maximum current and total experiment time as overall system parameters (the characteristic current and time of the system), then this function only needs to take in the fraction of the time that will be dedicated towards ramp-up (`rt`), and the total number of points into which the time will be divided (`nt`):  
@@ -126,6 +135,7 @@ Once we have found the list of points inside of the loop, we can calculate the m
 Solenoids are basically spirals of cable, with a radius ${ r_{ cs }  }$ and a number of turns ${ n_{ cs }  }$. If placed vertically, they will also have a height ${ h_{ cs }  }$. In our case, the ${ x }$ and ${ y }$ coordinates will define the horizontal plane, while the ${ z }$ coordinate will give the vertical, height coordinate.  
 For the horizontal plane, the points of the CS will just describe circles, of radius ${ r_{ cs }  }$. For the vertical component, if we place the center of the solenoid at the origin, the points will range between ${ -h_{ cs } /2 }$ and ${ h_{ cs } /2 }$. If we want a solenoid of ${ n_{ cs }  }$ loops, we need the ${ x }$ and ${ y }$ coordinates to complete ${ n_{ cs }  }$ circles in the time the ${ z }$ coordinate goes from ${ -h_{ cs } /2 }$ to ${ h_{ cs } /2 }$.  
 To give the coordinates of the points, we can use cylindrical coordinates, and parametrizing using the azimuthal angle $\phi$, the desired vector ${ \vec{ l } }$ that gives the points of the CS would be given like:
+
 $$
 \begin{align*}
     \vec{ l } &= \left( \begin{matrix}
@@ -135,6 +145,7 @@ $$
     \end{matrix} \right) 
 \end{align*}
 $$
+
 Where $\phi$ will go from ${ 0 }$ to ${ 2\pi  }$. Giving the ${ z }$ coordinate as a linear function will evenly distribute the CS loops through its entire height.  
 To implement this in the code, we can once again use a function like:
 ```python
@@ -208,18 +219,22 @@ Seen from the side, the system would look like:
 ![Diagram of the CS and plasma loop side](../attachments/cs-ploop-side.png) 
 ### Field flux
 Once with the magnetic fields, we can use it to calculate the flux through the plasma loop. Using the adimensional magnetic field ${ \vec{ F } }$, this would be done with the integral:
+
 $$
 \begin{align*}
     \int \vec{ F } \cdot \hat{ n }  \ \text{d} A  
 \end{align*}
 $$
+
 The dot product would leave only the ${ \hat{ z } }$ component of the field, as the normal vector of the loop area is pointing in this direction. The remaining integral can be solved computationally by turning it into a summation:
+
 $$
 \begin{align*}
     \int F_{ z } \ \text{d} A  &\to \sum\limits_{ n }^{  } F_{ z } \Delta A\\
     \Delta A &= \dfrac{ A_{ cs }  }{ n_{ p }  } 
 \end{align*}
 $$
+
 Where ${ n_{ p } }$ is the number of points into which we divide the space. We can then factorize the area ${ A_{ cs }  }$ to make the whole summation dimensionless.  
 
 For our list of magnetic fields, this would translate to taking the third component of all the calculated vectors, summing them all up, and then dividing by the number of points we had. The result of this operation would be a single number, equal to the total flux the (dimensionless) magnetic field has through the area defined by the plasma loop. 
@@ -228,12 +243,14 @@ For our list of magnetic fields, this would translate to taking the third compon
 The next step would be to calculate the time derivative of the field flux, which would give the induced electromotive force into the plasma loop.  
 The way the simulation is set up, the change through time is codified through the change in the CS's current. Near the beginning, we created a profile for the current that will flow through the central solenoid as time advances, so it will be this profile that we will derivate with respect to time.  
 In a similar way in which we discretized the flux integral into a summation, the time derivative of the dimensionless current profile will become a division like:
+
 $$
 \begin{align*}
     \dfrac{ d I }{ d t } &\to \dfrac{ \Delta I }{ \Delta t } \\
     \Delta t &= \dfrac{ T }{ n_{ t } } 
 \end{align*}
 $$
+
 Where ${ T }$ is the total time of the simulation, and ${ n_{ t } }$ is the number of steps into which this total time is divided. ${ \Delta I }$ would be the difference in the current from one moment in time to the other.  
 
 For our python code, we can easily find ${ \Delta I }$ using `numpy`'s `gradient`. This function gives us the difference from one array element to the other, in a way in which the resulting array has the same length as the original one. Then, we just multiply this result by `nt` (the number of time steps), and we would have the dimensionless time derivative of the current profile, which in turn gives the time derivative component for the magnetic field flux. 
