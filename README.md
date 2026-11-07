@@ -1,7 +1,7 @@
 # Plasma Current Simulation
 
 This is a simulation for the current of a plasma in a toroidal machine. The types of current that are simulated are the induced current by a central solenoid, and the bootstrap current, modeled as a diamagnetic current. For the induced current, the magnetic field flux of a central solenoid is calculated. For the bootstrap current, the pressure gradient of the plasma is used, and the poloidal magnetic field its current produces is calculated. The relevant calculations are made for the plasma's cross section.  
-The physics that are simulated in the code are explained, as well as the thought process behind their implementation. The simulation is made in Python, and presented in a Jupyter notebook. 
+The physics that are simulated in the code are explained, as well as the thought process behind their implementation. For a more detailed explanation of the underlying physics, see [here](https://github.com/juandresgg/fusion-plasma-two-fluid). The simulation is made in Python, and presented in a Jupyter notebook. 
 
 <!-- TODO: add some text saying:
            to see the physics of the plasma behind the diamagnetic drift, link to two-fluid pdf
